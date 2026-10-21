@@ -1,0 +1,37 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice, quantity;
+    float price, total;
+
+    cout << "===== FOOD ORDERING SYSTEM =====\n";
+    cout << "1. Pizza - Rs. 150\n";
+    cout << "2. Burger - Rs. 80\n";
+    cout << "3. Sandwich - Rs. 50\n";
+
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    cout << "Enter quantity: ";
+    cin >> quantity;
+
+    if (choice == 1)
+        price = 150;
+    else if (choice == 2)
+        price = 80;
+    else if (choice == 3)
+        price = 50;
+    else {
+        cout << "Invalid choice!";
+        return 0;
+    }
+
+    total = price * quantity;
+
+    cout << "Total Cost = Rs. " << total << endl;
+    cout << "Thank you for ordering!";
+
+    return 0;
+}
