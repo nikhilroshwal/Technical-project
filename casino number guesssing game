@@ -1,0 +1,33 @@
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    int number, guess, attempts = 3;
+
+    srand(time(0));
+    number = rand() % 10 + 1;
+
+    cout << "Welcome to Casino Number Guessing Game!\n";
+    cout << "Guess a number between 1 and 10.\n";
+    cout << "You have 3 attempts.\n";
+
+    while (attempts > 0) {
+        cout << "Enter your guess: ";
+        cin >> guess;
+
+        if (guess == number) {
+            cout << "Correct Guess! You won Rs. 100\n";
+            return 0;
+        } else {
+            cout << "Wrong Guess!\n";
+            attempts--;
+        }
+    }
+
+    cout << "Game Over! Number was " << number << endl;
+
+    return 0;
+}
